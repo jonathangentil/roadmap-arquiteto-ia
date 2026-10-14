@@ -1,0 +1,1024 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="theme-color" content="#f7f8f6"/>
+<title>Roadmap 2026–2027 | Arquiteto de Software com IA</title>
+<style>
+:root{--ink:#1a2635;--muted:#6d7886;--line:#dfe5e8;--bg:#f6f8f8;--paper:#fff;--yellow:#f6d56b;--green:#2d9a79;--shadow:0 6px 30px #1b344b0c;--sidebar:255px;--radius:15px;--topbar:67px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--ink);background:var(--bg);font:14px/1.55 ui-sans-serif,system-ui,-apple-system,'Segoe UI',sans-serif;-webkit-font-smoothing:antialiased}a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}
+.app{min-height:100vh;display:grid;grid-template-columns:var(--sidebar) minmax(0,1fr)}.aside{position:sticky;top:0;height:100vh;display:flex;flex-direction:column;border-right:1px solid var(--line);background:#fff;padding:22px 14px 14px;z-index:8;overflow:auto}.brand{display:flex;gap:11px;align-items:center;padding:0 10px 21px}.brand-logo{width:36px;height:36px;border:2px solid var(--ink);background:var(--yellow);border-radius:10px;position:relative;display:grid;place-items:center;box-shadow:3px 3px 0 var(--ink)}.brand-logo svg{width:22px;height:22px}.brand strong{display:block;font-size:14px;letter-spacing:-.3px}.brand small{display:block;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:1.1px}.aside-title{padding:18px 13px 7px;font-size:10px;text-transform:uppercase;letter-spacing:1.2px;font-weight:800;color:#93a0aa}.nav-btn{display:flex;align-items:center;gap:11px;padding:12px 13px;text-align:left;width:100%;background:transparent;border:0;border-radius:10px;color:#647180;font-size:13px;font-weight:650;margin-bottom:3px}.nav-btn:hover{background:#f3f5f4}.nav-btn.active{background:#ecf2eb;color:#1c352a}.nav-btn svg{width:17px;height:17px;flex:0 0 auto}.nav-btn .hint{margin-left:auto;background:white;color:#87919d;padding:1px 7px;border-radius:6px;font-size:10px;border:1px solid #e7e9eb}.mini-phase{display:flex;align-items:center;gap:9px;margin:2px 4px;padding:8px 9px;border:0;background:transparent;border-radius:7px;text-align:left;color:#6b7784;width:calc(100% - 8px);font-size:11px}.mini-phase:hover{background:#f5f7f6}.phase-num{width:19px;height:19px;border:1px solid #cdd6d7;border-radius:6px;display:grid;place-items:center;font-size:10px;font-weight:800;color:#7d8a91}.aside-bottom{margin-top:auto;padding:14px 10px 4px;border-top:1px solid var(--line)}.aside-bottom a{font-size:11px;color:#5e746a;text-decoration:none}.aside-bottom a:hover{text-decoration:underline}.side-note{font-size:11px;color:#96a1a8;margin-top:6px}
+.main{min-width:0}.topbar{height:var(--topbar);display:flex;align-items:center;justify-content:space-between;gap:12px;background:#ffffffdd;backdrop-filter:blur(13px);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:7;padding:0 31px}.crumb{font-size:12px;color:#788492}.crumb strong{color:#263541}.actions{display:flex;gap:8px;align-items:center}.btn{border:1px solid #cfd9db;border-radius:9px;padding:8px 12px;background:#fff;color:#2f4352;font-size:12px;font-weight:750;display:inline-flex;gap:7px;align-items:center;justify-content:center;white-space:nowrap;transition:.15s}.btn:hover{background:#f8f9f7;border-color:#95a6ae}.btn.primary{background:var(--ink);border-color:var(--ink);color:#fff}.btn.primary:hover{background:#314351}.btn svg{width:15px;height:15px}.content{max-width:1750px;margin:0 auto;padding:31px 33px 70px}.eyebrow{font-weight:850;letter-spacing:1.7px;color:#67836d;font-size:10px;text-transform:uppercase}.intro{display:flex;justify-content:space-between;gap:24px;align-items:start}.intro h1{font-size:clamp(29px,3.1vw,43px);max-width:820px;letter-spacing:-1.65px;line-height:1.17;margin:8px 0 11px}.intro p{font-size:14px;color:#657481;max-width:700px;margin:0}.intro-tag{font-size:11px;border:1px solid #dddfdb;padding:8px 11px;border-radius:100px;white-space:nowrap;background:#fff;color:#63717a;font-weight:700}.stat-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:25px}.stat{background:#fff;padding:17px 20px;border:1px solid #e2e8e6;border-radius:13px;box-shadow:var(--shadow)}.stat .stat-label{font-size:11px;color:#788590;font-weight:650}.stat strong{display:block;font-size:25px;letter-spacing:-1px;line-height:1.22;margin:7px 0 4px}.stat small{font-size:10px;color:#829099}.progress{height:7px;background:#e7eded;border-radius:9px;overflow:hidden;margin:9px 0 3px}.progress >span{display:block;height:100%;width:0;background:#4fbd97;border-radius:9px;transition:.3s}.view-top{display:flex;justify-content:space-between;gap:10px;align-items:center;margin:30px 0 15px}.tabs{display:inline-flex;gap:6px;padding:4px;background:#e9eded;border-radius:10px}.tab{background:none;border:0;color:#71808a;padding:8px 17px;font-size:12px;font-weight:800;border-radius:8px}.tab.active{background:#fff;color:#243845;box-shadow:0 1px 3px #1a343014}.view-desc{color:#84909b;font-size:11px;text-align:right}
+.section{display:none}.section.active{display:block}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:13px 16px;border:1px solid #e4e9e9;border-radius:14px;background:#fff;margin-bottom:12px}.filters{display:flex;gap:9px;align-items:center;flex-wrap:wrap}.search{display:flex;align-items:center;gap:7px;border:1px solid #dce4e5;border-radius:9px;padding:8px 10px;width:227px;background:#fcfdfd}.search input{outline:0;border:0;background:transparent;font-size:12px;min-width:0;flex:1;color:#263b49}.search input::placeholder{color:#a2aab0}.search svg{width:15px;height:15px;color:#849098}select{border:1px solid #dce4e5;border-radius:9px;padding:9px 28px 9px 10px;background:white;font-size:12px;color:#526270;outline:0}.subtle{font-size:11px;color:#87939c}.zoom-actions{display:flex;align-items:center;gap:6px}.zoom-actions .btn{padding:7px 10px}.zoom-num{min-width:42px;text-align:center;font-size:11px;color:#6d7a88;font-weight:800}.legend{display:flex;gap:15px;align-items:center;flex-wrap:wrap;font-size:11px;color:#76838d;margin:10px 1px 17px}.legend span{display:inline-flex;align-items:center;gap:6px}.dot{width:10px;height:10px;border-radius:100%;background:#fff;border:2px solid #bbc7ca}.dot.doing{background:#fff1c9;border-color:#d59c30}.dot.done{background:#bee9d4;border-color:#309976}
+.map-shell{overflow:auto;max-height:none;min-height:770px;min-width:0;border:1px solid #e2e8e7;background-color:#fcfdfc;background-image:radial-gradient(#d5deda 1px,transparent 1px);background-size:18px 18px;border-radius:16px;position:relative;scrollbar-width:thin}.map-frame{width:max-content;min-width:100%;position:relative;padding:47px 37px 82px;transform-origin:top left}.map-start{text-align:center;position:relative;z-index:1;width:460px;margin:0 auto 48px;padding:20px 27px;background:var(--ink);color:white;border-radius:13px;border:2px solid #111922;box-shadow:5px 6px 0 #e9c85f}.map-start .over{font-size:10px;font-weight:900;letter-spacing:2px;color:#f9d96b}.map-start h2{margin:8px 0;font-size:20px;letter-spacing:-.5px}.map-start p{margin:0;font-size:11px;color:#d0d9dc}.stages{position:relative;z-index:0}.stages::before{content:"";position:absolute;top:-45px;bottom:21px;left:50%;width:4px;background:#263541;transform:translateX(-50%);border-radius:4px}.stage{position:relative;display:grid;grid-template-columns:370px 292px 370px;column-gap:39px;align-items:start;margin-bottom:52px;width:1110px;z-index:1}.stage:last-child{margin-bottom:0}.branch{position:relative;display:flex;flex-direction:column;gap:10px}.branch::after{content:"";position:absolute;top:54px;width:41px;border-top:2px dashed #9eaab4}.branch.left::after{right:-41px}.branch.right::after{left:-41px}.branch-label{font-size:10px;color:#99a5ad;letter-spacing:1.2px;font-weight:900;padding:4px 9px 0;text-transform:uppercase}.phase-card{margin-top:29px;position:relative;border-radius:14px;background:var(--yellow);padding:19px 18px;border:2px solid #273541;box-shadow:5px 5px 0 #273541;text-align:center;z-index:2}.phase-card .phase-over{display:inline-flex;gap:7px;align-items:center;border:1px solid #c8a943;border-radius:80px;padding:3px 9px;background:#ffe8a2;color:#5e4d2a;font-size:10px;font-weight:900;letter-spacing:.6px}.phase-card h3{font-size:17px;line-height:1.25;letter-spacing:-.5px;margin:11px 0 9px}.phase-card p{font-size:11px;margin:0;color:#6b5935;line-height:1.45}.phase-card button{background:#263541;border:0;color:#fff;font-weight:750;font-size:10px;padding:8px 11px;border-radius:7px;margin-top:13px}.phase-card button:hover{background:#435161}.stage-bottom{display:inline-flex;background:#fff9e5;border:1px solid #c5b37d;padding:2px 8px;border-radius:6px;margin-top:11px;font-size:10px;color:#6b5b36;font-weight:700}.skill{position:relative;width:100%;min-height:55px;display:flex;align-items:center;gap:12px;text-align:left;border:1px solid #cad8d6;background:#fff;border-radius:10px;padding:10px 10px 10px 12px;box-shadow:0 2px 0 #e5ebea;transition:border-color .15s,transform .15s,box-shadow .15s}.skill:hover{border-color:#60737b;transform:translateY(-2px);box-shadow:2px 4px 0 #d5dfde}.skill .stripe{position:absolute;left:0;top:7px;bottom:7px;width:4px;border-radius:0 4px 4px 0;background:var(--track)}.skill-info{min-width:0;flex:1;padding-left:5px}.skill .kind{color:#84939a;font-size:9px;text-transform:uppercase;letter-spacing:.7px;font-weight:800;display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.skill .skill-name{font-size:12px;font-weight:800;color:#293845;display:block;line-height:1.3}.skill .check{width:20px;height:20px;flex:0 0 auto;border:1.8px solid #b5c3c5;color:#fff;background:white;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:900}.skill[data-status=doing]{background:#fffaf0;border-color:#e6cb90}.skill[data-status=doing] .check{border-color:#d5a347;background:#fff0b9;color:#a87620}.skill[data-status=done]{background:#effaf4;border-color:#8fcab1}.skill[data-status=done] .check{border-color:#2a9a73;background:#2a9a73}.skill .arrow{color:#9eabb0;font-size:14px;margin-left:0}.map-end{position:relative;z-index:2;margin:12px auto 0;text-align:center;max-width:460px;background:#dff4e8;border:2px solid #448c6f;border-radius:13px;padding:15px;font-weight:800;box-shadow:4px 4px 0 #9acbab}.map-end span{display:block;font-size:10px;font-weight:600;color:#668a77;margin-top:5px}
+.notice{background:#fffbec;border:1px solid #f2e2ad;border-radius:11px;padding:12px 15px;color:#7a6434;font-size:12px;line-height:1.6;margin:15px 0 0}.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(285px,1fr));gap:13px}.course{background:#fff;border:1px solid #e1e7e7;border-radius:15px;padding:19px;display:flex;flex-direction:column;gap:8px;box-shadow:var(--shadow)}.course h3{font-size:15px;line-height:1.4;letter-spacing:-.25px;min-height:43px;margin:0}.course .author{color:#89969e;font-size:11px}.course .stagepill{display:inline-flex;align-self:flex-start;background:#eef3f2;border-radius:5px;font-size:10px;font-weight:750;color:#627881;padding:4px 8px;margin:7px 0}.course .course-num{font-size:21px;font-weight:850;letter-spacing:-.8px}.course .course-track{height:8px;background:#eef0f0;border-radius:8px;overflow:hidden}.course .course-track span{display:block;height:100%;background:#7f70d7;border-radius:8px}.course .note{margin-top:auto;color:#8b969b;font-size:10px}.course:first-child,.course:nth-child(2){border-left:4px solid #68b998}
+.panel-title{font-size:20px;letter-spacing:-.6px;margin:0 0 7px}.panel-desc{font-size:12px;color:#7d8b93;margin:0 0 20px;max-width:780px}.roadlist{display:grid;gap:12px}.road-row{border:1px solid #e1e8e6;background:#fff;border-radius:14px;display:grid;grid-template-columns:93px 1fr auto;gap:15px;align-items:start;padding:17px 18px}.road-week{font-size:11px;font-weight:900;color:#6d7752;background:#fbf3d7;border-radius:8px;padding:8px;white-space:nowrap;text-align:center}.road-row h3{margin:0 0 4px;font-size:15px}.road-row p{margin:0;font-size:12px;color:#798891}.road-row .road-meta{font-size:11px;font-weight:750;color:#81909a}.road-row .road-meta strong{color:#284639}.path-footer{font-size:11px;color:#7b8991;background:#f5f8f7;border-top:1px solid #e4ebe8;padding:10px 18px;margin:8px -18px -17px;border-radius:0 0 14px 14px}
+.daily{border:1px solid #e4eaea;background:#fff;border-radius:12px;padding:15px 16px}.daily +.daily{margin-top:9px}.daily label{display:flex;align-items:flex-start;gap:12px;cursor:pointer}.daily input{width:17px;height:17px;accent-color:#30a079;margin-top:2px;cursor:pointer}.daily .day{font-weight:850;font-size:12px;color:#5a7869;min-width:70px}.daily .task{font-size:12px;color:#41515d}.daily:has(input:checked){background:#f0faf4}.daily:has(input:checked) .task{text-decoration:line-through;color:#7b9189}.plan-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(270px,.7fr);gap:22px}.schedule{border:1px solid #e1e8e7;background:white;border-radius:15px;padding:18px}.schedule table{border-collapse:collapse;width:100%;font-size:12px}.schedule th{text-align:left;color:#849298;font-size:10px;text-transform:uppercase;letter-spacing:.8px;padding:9px 5px}.schedule td{padding:9px 5px;border-bottom:1px solid #edf0f0;vertical-align:top}.schedule td:first-child{font-weight:800}.schedule small{color:#82939a}.resources{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0}.resource{font-size:11px;font-weight:700;text-decoration:none;background:#fff;border:1px solid #e1e6e5;border-radius:80px;padding:8px 11px;color:#4e6972}.resource:hover{border-color:#94a9b3;background:#f2f6f5}
+.overlay{position:fixed;inset:0;background:#18273679;z-index:15;display:none}.overlay.show{display:block}.drawer{position:fixed;right:0;top:0;height:100vh;width:min(495px,100vw);background:white;z-index:16;transform:translateX(105%);transition:transform .21s ease;box-shadow:-17px 0 50px #0c20252a;display:flex;flex-direction:column}.drawer.show{transform:translateX(0)}.drawer-head{padding:18px 24px;border-bottom:1px solid #e7edec;display:flex;justify-content:space-between;gap:15px;align-items:start}.drawer-head .eyebrow{margin-bottom:8px}.drawer-head h2{margin:0;font-size:21px;line-height:1.3;letter-spacing:-.5px}.close{border:0;background:#eef2f2;border-radius:8px;width:32px;height:32px;font-weight:900;color:#4f5f6a;font-size:20px}.drawer-body{padding:22px 24px;overflow:auto;flex:1}.drawer-body h4{font-size:10px;text-transform:uppercase;color:#758b8e;letter-spacing:1px;margin:22px 0 8px}.drawer-body p{font-size:13px;line-height:1.8;color:#465761;margin:0}.drawer-body .detail{background:#f5f7f7;padding:13px 15px;border-radius:10px;border:1px solid #e5ebea;margin-top:12px}.drawer-foot{border-top:1px solid #e7edec;padding:16px 24px;display:flex;gap:8px;flex-wrap:wrap}.drawer-foot .btn{flex:1}.detail-links{display:flex;gap:7px;flex-wrap:wrap}.detail-links a{font-size:11px;text-decoration:none;padding:7px 9px;border:1px solid #cddbdc;border-radius:8px;color:#385b66}.toast{position:fixed;bottom:25px;left:50%;transform:translate(-50%,20px);background:#283b45;color:white;border-radius:9px;padding:11px 17px;z-index:30;opacity:0;pointer-events:none;transition:.2s;box-shadow:var(--shadow);font-weight:700;font-size:12px}.toast.show{transform:translate(-50%,0);opacity:1}
+@media(max-width:1190px){:root{--sidebar:215px}.content{padding:27px 24px 55px}.stage{grid-template-columns:350px 270px 350px;gap:29px;width:1028px}.branch.left::after{right:-31px;width:31px}.branch.right::after{left:-31px;width:31px}.map-frame{padding-left:25px;padding-right:25px}}@media(max-width:840px){.app{display:block}.aside{height:auto;position:static;padding:10px 14px;flex-direction:row;align-items:center;gap:15px;overflow:visible}.brand{padding:0}.aside .aside-title,.aside .mini-phase,.aside .aside-bottom{display:none}.nav-wrap{display:flex;gap:4px;overflow:auto}.nav-btn{width:auto;white-space:nowrap;margin:0;padding:8px;font-size:11px}.nav-btn .hint{display:none}.topbar{top:0;height:53px;padding:0 15px}.content{padding:25px 14px 50px}.intro{display:block}.intro-tag{display:inline-block;margin-top:14px}.stat-strip{grid-template-columns:repeat(2,1fr)}.stat{padding:12px}.stat strong{font-size:20px}.view-top{align-items:flex-start;flex-direction:column}.view-desc{display:none}.plan-grid{grid-template-columns:1fr}.road-row{grid-template-columns:80px 1fr}.road-row .road-meta{grid-column:2}.crumb{font-size:10px}.actions .btn span{display:none}.actions .btn{padding:7px 8px}.search{width:min(100%,280px)}.map-frame{min-width:0}.stat-strip{gap:8px}}
+@media print{.aside,.topbar,.toolbar,.legend,.tabs,.view-top,.btn,.overlay,.drawer,.toast{display:none!important}.app{display:block}.content{padding:0}.map-shell{overflow:visible;border:0;background:#fff}.map-frame{transform:none!important;zoom:.68!important}.section:not(.active){display:none}.stat-strip{break-inside:avoid}.stage{break-inside:avoid}.map-start,.skill,.phase-card{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="aside" aria-label="Menu do roadmap">
+ <div class="brand"><div class="brand-logo"><svg fill="none" viewBox="0 0 24 24" stroke="#202c35" stroke-width="2"><circle cx="5" cy="5" r="2.2"/><circle cx="19" cy="12" r="2.2"/><circle cx="5" cy="19" r="2.2"/><path d="M7 6.5 16.5 11M7 17.8 16.5 13"/></svg></div><div><strong>Meu Roadmap</strong><small>ENGENHARIA + IA</small></div></div>
+ <div class="aside-title">Navegação</div><div class="nav-wrap">
+ <button class="nav-btn active" data-view="map" aria-label="Mapa interativo"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M17.5 14v7M14 17.5h7"/></svg>Mapa interativo</button>
+ <button class="nav-btn" data-view="phases"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/><circle cx="7" cy="7" r="2" fill="white"/><circle cx="14" cy="12" r="2" fill="white"/><circle cx="9" cy="17" r="2" fill="white"/></svg>Fases e entregas <span class="hint">6</span></button>
+ <button class="nav-btn" data-view="courses"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="m2 10 10-5 10 5-10 5-10-5ZM5 12v5c4 3 10 3 14 0v-5"/></svg>Meus cursos <span class="hint">8</span></button>
+ <button class="nav-btn" data-view="plan"><svg fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 2v6M17 2v6M3 10h18"/></svg>Primeiros 14 dias</button>
+ </div>
+ <div class="aside-title">Ir para fase</div><div id="phase-nav"></div>
+ <div class="aside-bottom"><div><strong style="font-size:12px">Fonte de referência</strong></div><a id="notion-link" target="_blank" rel="noopener">↗ Documentação completa no Notion</a><div class="side-note">Planejamento autoral · Outubro de 2026</div></div>
+</aside>
+<div class="main">
+ <header class="topbar"><div class="crumb">Pessoal &nbsp; / &nbsp; IA &nbsp; / &nbsp; <strong>Roadmap de aprendizagem</strong></div><div class="actions"><button class="btn" id="export-json" title="Exportar progresso em JSON"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 16v4h16v-4"/></svg><span>Exportar progresso</span></button><button class="btn" id="import-btn" title="Importar progresso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 17V5m0 0-4 4m4-4 4 4M4 16v4h16v-4"/></svg><span>Importar</span></button><input type="file" accept="application/json" id="import-file" hidden/><button class="btn primary" id="print-btn" title="Imprimir / salvar PDF">⎙ <span>Imprimir</span></button></div></header>
+ <main class="content">
+ <div class="intro"><div><div class="eyebrow">TRILHA PERSONALIZADA · 2026—2027</div><h1>Arquiteto de Software<br/>com IA &amp; Harness Engineering</h1><p>Da arquitetura ao desenvolvimento agêntico: especifique, orquestre, revise e valide. Um mapa prático de 26 semanas, integrado aos seus cursos e à prática de engenharia agêntica.</p></div><span class="intro-tag">↗ Objetivo: arquiteto hands-on</span></div>
+ <div class="stat-strip"><div class="stat"><div class="stat-label">Competências validadas</div><strong id="stat-done">0 / 48</strong><div class="progress"><span id="overall-bar"></span></div><small id="overall-pct">0% concluído no roadmap</small></div><div class="stat"><div class="stat-label">Em andamento</div><strong id="stat-doing">0</strong><small>Etapas iniciadas com prática</small></div><div class="stat"><div class="stat-label">Carga de estudos</div><strong>17–19 h</strong><small>Por semana · 26 semanas</small></div><div class="stat"><div class="stat-label">Cursos já concluídos</div><strong>2 / 8</strong><small>SDD e Git na Udemy; validação prática separada</small></div></div>
+ <div class="view-top"><div class="tabs" role="tablist" aria-label="Visualizações"><button class="tab active" data-view="map" role="tab">Mapa</button><button class="tab" data-view="phases" role="tab">Fases</button><button class="tab" data-view="courses" role="tab">Cursos</button><button class="tab" data-view="plan" role="tab">14 dias</button></div><div class="view-desc">Clique em um assunto para abrir o laboratório e marcar seu progresso</div></div>
+ <section class="section active" id="view-map"><div class="toolbar"><div class="filters"><div class="search"><svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input id="search" placeholder="Buscar assunto ou conceito" aria-label="Pesquisar competências"/></div><select id="filter-track" aria-label="Filtrar por trilha"><option value="all">Todas as trilhas</option></select><select id="filter-status" aria-label="Filtrar por situação"><option value="all">Todos os status</option><option value="todo">A fazer</option><option value="doing">Em andamento</option><option value="done">Concluído</option></select></div><div class="zoom-actions"><button class="btn" id="zoom-out" title="Reduzir escala">−</button><span class="zoom-num" id="zoom-num">100%</span><button class="btn" id="zoom-in" title="Aumentar escala">+</button><button class="btn" id="zoom-reset" title="Redefinir zoom">100%</button></div></div><div class="legend"><span><i class="dot"></i>A fazer</span><span><i class="dot doing"></i>Em andamento</span><span><i class="dot done"></i>Concluído</span><span>· Cursos completos ≠ habilidades validadas</span></div><div class="map-shell" id="map-shell"><div class="map-frame" id="map-frame"><div class="map-start"><div class="over">INÍCIO DA JORNADA</div><h2>Engenheiro no controle da IA</h2><p>Engenharia sólida · Spec-Driven Development · Harness e Segundo Cérebro</p></div><div class="stages" id="stages"></div><div class="map-end">✓ Projeto demonstrável &amp; portfólio técnico<span>Consolidação de 12–18 meses após o ciclo intensivo</span></div></div></div><div class="notice">↳ <strong>Como usar:</strong> clique em qualquer nó para ver o objetivo, laboratório e evidência de conclusão. Marque a habilidade como “em andamento” ou “concluída”. Seu progresso fica salvo neste navegador. Em outros dispositivos, use Exportar / Importar.</div></section>
+ <section class="section" id="view-phases"><h2 class="panel-title">Fases e entregas verificáveis</h2><p class="panel-desc">As seis etapas organizam o ciclo intensivo. Cursos, projeto, inglês e mentoria ocupam os mesmos blocos de tempo; nada de acumular horas em atraso.</p><div class="roadlist" id="phase-list"></div><h2 class="panel-title" style="margin-top:32px">Consolidação de carreira</h2><div class="roadlist"><div class="road-row"><div class="road-week">Meses 7–12</div><div><h3>Aplicar em situações reais</h3><p>Projetos acompanhados, decisões sob mudança de requisitos, operação, certificação quando houver preparo.</p></div></div><div class="road-row"><div class="road-week">Meses 13–18</div><div><h3>Liderar uma iniciativa delimitada</h3><p>Revisar decisões com engenheiros, fundamentar escolhas de segurança, custo, migração e operação.</p></div></div><div class="road-row"><div class="road-week">Meses 19–24</div><div><h3>Profundidade e posicionamento</h3><p>Ampliar responsabilidade, manter portfólio e concluir formação acadêmica conforme calendário, quando aplicável.</p></div></div></div></section>
+ <section class="section" id="view-courses"><h2 class="panel-title">Seu acervo da Udemy</h2><p class="panel-desc">O progresso mostrado corresponde à captura compartilhada em outubro de 2026. A conclusão de um curso não marca automaticamente as competências do mapa.</p><div class="cards" id="course-list"></div><div class="notice"><strong>Critério para novos investimentos:</strong> primeiro concluir Claude Code, avançar em Arquitetura, aplicar Git e SDD. Comparar as ementas dos dois cursos AWS e escolher um. Iniciar apenas um curso LangGraph/LangChain quando houver necessidade prática. MBA Full Cycle ou FIAP e AWS Solutions Architect Associate permanecem opções a avaliar, não obrigações.</div></section>
+ <section class="section" id="view-plan"><h2 class="panel-title">Arranque: primeiros 14 dias</h2><p class="panel-desc">Um plano de início rápido, sem substituir a profundidade dos 26 blocos. A demonstração pode ser local. Adapte as datas se o diagnóstico apontar lacunas.</p><div class="plan-grid"><div><div id="daily-list"></div></div><div><div class="schedule"><h3 style="margin:0 0 10px;font-size:16px">Rotina semanal</h3><table><thead><tr><th>Dia</th><th>Horário</th><th>Atividade</th></tr></thead><tbody id="schedule-list"></tbody></table><div class="notice" style="margin-top:12px">Inglês: 3–5h flexíveis, principalmente em deslocamentos e pausas permitidas. Sexta: 15min para escrever um resumo; sábado: prática breve de apresentação.</div></div><div class="schedule" style="margin-top:15px"><h3 style="margin:0 0 8px;font-size:16px">Projeto âncora</h3><p style="font-size:12px;color:#6a7882">Plataforma de documentação assistida por agentes: solicitação → rascunho com fontes → revisão humana → publicação aprovada. FastAPI + PostgreSQL + integração Notion, expandindo apenas quando houver justificativa.</p><strong style="font-size:11px">Aceite mínimo</strong><ul style="font-size:11px;color:#6a7882;padding-left:16px"><li>Fonte rastreável para afirmações geradas</li><li>Revisor, versão e destino registrados</li><li>Bloqueio efetivo sem aprovação</li><li>Sem duplicação após falha de integração</li></ul></div></div></div></section>
+ <footer style="font-size:11px;color:#96a2a9;margin-top:28px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap"><span>Roadmap pessoal · 2026–2027 · Planejamento, não certificação de competência</span><span><a id="source-bottom" target="_blank" rel="noopener">Ver documentação original ↗</a></span></footer>
+ </main>
+</div>
+</div>
+<div class="overlay" id="overlay"></div><aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Detalhes da habilidade"><div class="drawer-head"><div><div class="eyebrow" id="detail-tag"></div><h2 id="detail-title"></h2></div><button class="close" id="close-drawer" aria-label="Fechar">×</button></div><div class="drawer-body" id="drawer-body"></div><div class="drawer-foot"><button class="btn" id="status-todo">A fazer</button><button class="btn" id="status-doing">◐ Em andamento</button><button class="btn primary" id="status-done">✓ Concluído</button></div></aside>
+<div class="toast" id="toast"></div>
+<script id="payload" type="application/json">{
+  "title": "Arquiteto de Software com IA \u0026 Harness Engineering",
+  "source": "https://app.notion.com/p/3f4859a990a68114a790d864c46b19db",
+  "phases": [
+    {
+      "n": 1,
+      "weeks": "01–04",
+      "title": "Fundamentos \u0026 aderência ao time",
+      "desc": "Arquitetura, GitHub, SDD e introdução ao Segundo Cérebro desde o início.",
+      "deliverable": "C4 Context/Container + 3 ADRs + PR com checks + memória de contexto inicial.",
+      "date": "Out–Nov 2026"
+    },
+    {
+      "n": 2,
+      "weeks": "05–08",
+      "title": "System Design \u0026 AWS",
+      "desc": "Contratos, persistência, mensageria, observabilidade e decisões de cloud.",
+      "deliverable": "API modular com banco, CI, testes de integração e cenário de falha observável.",
+      "date": "Nov–Dez 2026"
+    },
+    {
+      "n": 3,
+      "weeks": "09–12",
+      "title": "Engenharia de especificações",
+      "desc": "Transformar intenção em requisitos, design técnico, tarefas e testes verificáveis.",
+      "deliverable": "Pacote de especificações reproduzível com rastreabilidade entre requisitos e evidências.",
+      "date": "Dez 2026–Jan 2027"
+    },
+    {
+      "n": 4,
+      "weeks": "13–16",
+      "title": "Harness Engineering",
+      "desc": "Criar condições para que coding agents executem tarefas delimitadas com segurança.",
+      "deliverable": "Repositório agent-ready + três tarefas repetíveis + relatório de avaliação do harness.",
+      "date": "Jan–Fev 2027"
+    },
+    {
+      "n": 5,
+      "weeks": "17–21",
+      "title": "Entrega com IA em produção",
+      "desc": "Integrar SDD, agentes, testes, segurança e operação em um fluxo vertical completo.",
+      "deliverable": "Funcionalidade revisada, implantada, testada, observável e com rollback ensaiado.",
+      "date": "Fev–Mar 2027"
+    },
+    {
+      "n": 6,
+      "weeks": "22–26",
+      "title": "Consolidação \u0026 portfólio",
+      "desc": "Finalizar demonstração, evidências, mentoria e posicionamento profissional.",
+      "deliverable": "Demo reproduzível, README, runbook, C4/ADRs finais e apresentação de 15 minutos.",
+      "date": "Mar–Abr 2027"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "diagnostic",
+      "p": 1,
+      "track": "arch",
+      "title": "Diagnóstico 0–5",
+      "summary": "Programação, HTTP, SQL, testes, DDD, arquitetura, cloud e agentes; distinguir execução assistida de entendimento.",
+      "lab": "Implementar e explicar uma pequena API sem IA; registrar pontos fortes e lacunas.",
+      "evidence": "Notas justificadas por artefatos e plano de nivelamento.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "solid",
+      "p": 1,
+      "track": "arch",
+      "title": "SOLID, coesão \u0026 trade-offs",
+      "summary": "Acoplamento, qualidade, simplicidade, evolução e decisões conscientes.",
+      "lab": "Comparar duas alternativas de modularização para o produto.",
+      "evidence": "Trade-offs e custos de manutenção registrados em ADR.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "clean",
+      "p": 1,
+      "track": "arch",
+      "title": "Clean / Hexagonal",
+      "summary": "Dependências, separação domínio-aplicação-infraestrutura e testes de arquitetura.",
+      "lab": "Implementar módulo de domínio com adaptador de persistência substituível.",
+      "evidence": "Teste automatizado bloqueando dependência proibida.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "ddd",
+      "p": 1,
+      "track": "arch",
+      "title": "DDD \u0026 bounded contexts",
+      "summary": "Entidades, value objects e linguagem ubíqua baseada em regras de negócio.",
+      "lab": "Modelar solicitação, rascunho, revisão e publicação documental.",
+      "evidence": "Modelo e termos refletidos nos testes e no código.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "c4",
+      "p": 1,
+      "track": "arch",
+      "title": "C4 \u0026 primeiros ADRs",
+      "summary": "Contexto, containers lógicos e registro de alternativas arquiteturais.",
+      "lab": "Publicar Context/Container e três ADRs iniciais.",
+      "evidence": "Diagramas distinguem planejado de implementado e ADRs registram consequências.",
+      "courses": [
+        "arch"
+      ],
+      "links": [
+        "https://c4model.com/",
+        "https://adr.github.io/"
+      ]
+    },
+    {
+      "id": "github",
+      "p": 1,
+      "track": "git",
+      "title": "GitHub: branches → PR",
+      "summary": "Workflow colaborativo, review, branch protection, conflitos, commits e checks.",
+      "lab": "Abrir um PR com branch isolada, revisão, CI e resolução de conflito em laboratório.",
+      "evidence": "Histórico verificável de PR, revisão e pipeline.",
+      "courses": [
+        "git"
+      ],
+      "links": [
+        "https://docs.github.com/"
+      ]
+    },
+    {
+      "id": "sdd-basics",
+      "p": 1,
+      "track": "spec",
+      "title": "SDD: fluxo ponta a ponta",
+      "summary": "Problema → spec → design técnico → tasks → implementação → testes/evidência.",
+      "lab": "Aplicar o fluxo a uma alteração pequena; revisar decisões com o agente.",
+      "evidence": "Cada requisito possui teste/evidência, diff e revisão humana.",
+      "courses": [
+        "sdd"
+      ],
+      "links": [
+        "https://github.com/github/spec-kit"
+      ]
+    },
+    {
+      "id": "memory-intro",
+      "p": 1,
+      "track": "agent",
+      "title": "Segundo Cérebro: contexto ativo",
+      "summary": "Separar conhecimento estável de estado atual, decisões, fontes e hipóteses.",
+      "lab": "Criar estrutura de memória para o repositório com política de atualização.",
+      "evidence": "Nova sessão recupera decisão válida e identifica fonte.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "english1",
+      "p": 1,
+      "track": "english",
+      "title": "Inglês: diagnóstico \u0026 escuta",
+      "summary": "Estimar nível CEFR e ouvir vocabulário de APIs, Git e arquitetura.",
+      "lab": "Ouvir conteúdo técnico nos deslocamentos disponíveis e registrar 5–10 expressões.",
+      "evidence": "Registro de minutos, termos e breve explicação oral.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "api",
+      "p": 2,
+      "track": "arch",
+      "title": "REST, OpenAPI \u0026 contratos",
+      "summary": "Semântica HTTP, contratos, versionamento, autenticação e autorização.",
+      "lab": "Implementar endpoints documentados no FastAPI e um teste de acesso negado.",
+      "evidence": "OpenAPI reproduzível e testes de contrato/segurança.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "db",
+      "p": 2,
+      "track": "arch",
+      "title": "PostgreSQL \u0026 consistência",
+      "summary": "Índices, transações, isolamento, cache e idempotência.",
+      "lab": "Persistir aprovação de documento e simular retry de publicação.",
+      "evidence": "Sem duplicação, teste de rollback da transação e consultas explicadas.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "messaging",
+      "p": 2,
+      "track": "arch",
+      "title": "Eventos, filas \u0026 resiliência",
+      "summary": "Workers/fila quando necessários; retries, timeouts e circuit breakers.",
+      "lab": "Simular falha em integração externa com política de tentativas.",
+      "evidence": "Falha visível e nenhum sucesso falso.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "cicd",
+      "p": 2,
+      "track": "git",
+      "title": "Docker \u0026 GitHub Actions",
+      "summary": "Setup local reprodutível, lint, testes, checks e segurança básica.",
+      "lab": "Subir projeto a partir de checkout limpo e rodar CI.",
+      "evidence": "Checks verdes e instruções de setup testadas em ambiente limpo.",
+      "courses": [
+        "git"
+      ],
+      "links": []
+    },
+    {
+      "id": "aws-foundation",
+      "p": 2,
+      "track": "cloud",
+      "title": "AWS: IAM, VPC \u0026 desenho",
+      "summary": "Infra, identidades, rede, regiões, custos e trade-offs AWS.",
+      "lab": "Desenhar duas opções de implantação e analisar permissões mínimas.",
+      "evidence": "Diagrama, riscos, custos estimados e justificativa da escolha.",
+      "courses": [
+        "aws1",
+        "aws2"
+      ],
+      "links": [
+        "https://aws.amazon.com/architecture/well-architected/"
+      ]
+    },
+    {
+      "id": "aws-services",
+      "p": 2,
+      "track": "cloud",
+      "title": "AWS: principais serviços",
+      "summary": "Avaliar Amplify, EC2, S3, RDS, API Gateway, ECS e OpenSearch Service.",
+      "lab": "Construir protótipo usando somente serviços necessários; comparar opções.",
+      "evidence": "Arquitetura e custo documentados; não usar serviços sem justificativa.",
+      "courses": [
+        "aws1",
+        "aws2"
+      ],
+      "links": []
+    },
+    {
+      "id": "aws-observe",
+      "p": 2,
+      "track": "ops",
+      "title": "CloudWatch \u0026 X-Ray",
+      "summary": "Logs, métricas, tracing distribuído e análise de falhas em cloud.",
+      "lab": "Instrumentar requisição com um erro controlado e rastreá-lo.",
+      "evidence": "Falha identificável por trace/log; limites de observabilidade conhecidos.",
+      "courses": [
+        "aws1",
+        "aws2"
+      ],
+      "links": []
+    },
+    {
+      "id": "english2",
+      "p": 2,
+      "track": "english",
+      "title": "Inglês: documentação técnica",
+      "summary": "Ler textos originais de AWS, Python e arquitetura reduzindo tradução.",
+      "lab": "Resumir uma página técnica e apresentar o desenho de um módulo.",
+      "evidence": "Resumo simples em inglês com conceitos corretos.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "discovery",
+      "p": 3,
+      "track": "spec",
+      "title": "Discovery \u0026 requisitos",
+      "summary": "Objetivos, atores, RF/RNF, restrições, premissas e ambiguidades.",
+      "lab": "Conduzir discovery fictício do fluxo de aprovação documental.",
+      "evidence": "Requisitos revisados, dúvidas críticas respondidas.",
+      "courses": [
+        "sdd"
+      ],
+      "links": []
+    },
+    {
+      "id": "prd",
+      "p": 3,
+      "track": "spec",
+      "title": "PRD \u0026 casos de uso",
+      "summary": "Fluxos de sucesso e falha, histórias, critérios de aceitação e fronteiras.",
+      "lab": "Especificar solicitação, revisão e aprovação antes de implementar.",
+      "evidence": "Critérios claros de sucesso, erro e acesso indevido.",
+      "courses": [
+        "sdd"
+      ],
+      "links": []
+    },
+    {
+      "id": "design",
+      "p": 3,
+      "track": "arch",
+      "title": "Design técnico \u0026 ADR",
+      "summary": "Contratos, modelo de dados, alternativas, migração e impactos.",
+      "lab": "Escrever design da integração Notion, com plano de falha e idempotência.",
+      "evidence": "ADR e contratos alinhados às tarefas e testes.",
+      "courses": [
+        "arch",
+        "sdd"
+      ],
+      "links": []
+    },
+    {
+      "id": "tasks",
+      "p": 3,
+      "track": "spec",
+      "title": "Tasks \u0026 Definition of Done",
+      "summary": "Decomposição incremental sem ambiguidade crítica e critérios verificáveis.",
+      "lab": "Quebrar uma feature vertical em tarefas pequenas independentes.",
+      "evidence": "Tasks apontam para requisitos, implementação e testes.",
+      "courses": [
+        "sdd"
+      ],
+      "links": []
+    },
+    {
+      "id": "spec-kit",
+      "p": 3,
+      "track": "spec",
+      "title": "Spec Kit como referência",
+      "summary": "Praticar disciplina de spec-driven; ferramenta é opcional.",
+      "lab": "Executar uma feature com Spec Kit ou estrutura equivalente.",
+      "evidence": "Comparar artefatos e gaps com o fluxo original.",
+      "courses": [
+        "sdd"
+      ],
+      "links": [
+        "https://github.com/github/spec-kit"
+      ]
+    },
+    {
+      "id": "traceability",
+      "p": 3,
+      "track": "git",
+      "title": "Revisão orientada por evidências",
+      "summary": "Confrontar output do agente com critérios e evidências; não confiar em sumário.",
+      "lab": "Revisar PR e rastrear requisito → commit → teste.",
+      "evidence": "Checklist de aceite com pass/fail e links.",
+      "courses": [
+        "git",
+        "sdd"
+      ],
+      "links": []
+    },
+    {
+      "id": "english3",
+      "p": 3,
+      "track": "english",
+      "title": "Inglês: escrita técnica",
+      "summary": "Redigir critérios, README e resumos curtos de ADR em inglês simples.",
+      "lab": "Escrever um ADR-resumo e receber correção de clareza.",
+      "evidence": "Resumo claro, revisado e legível.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "agentloop",
+      "p": 4,
+      "track": "agent",
+      "title": "Agent loop \u0026 runtime",
+      "summary": "Ferramentas, iteração, contexto, limites de execução e checkpoints.",
+      "lab": "Atribuir tarefa delimitada a coding agent e inspecionar decisões.",
+      "evidence": "Log do trabalho, intervenção humana e diff revisado.",
+      "courses": [
+        "claude"
+      ],
+      "links": [
+        "https://code.claude.com/docs/en/overview",
+        "https://developers.openai.com/codex/"
+      ]
+    },
+    {
+      "id": "instructions",
+      "p": 4,
+      "track": "agent",
+      "title": "CLAUDE.md \u0026 AGENTS.md",
+      "summary": "Instruções curtas de projeto, convenções e documentação modular.",
+      "lab": "Criar instruções e confirmar carregamento pelo runtime usado.",
+      "evidence": "Agente respeita limites e encontra referências corretas.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "skills",
+      "p": 4,
+      "track": "agent",
+      "title": "Skills especializadas",
+      "summary": "Procedimentos reutilizáveis, escopo, condições de disparo e versionamento.",
+      "lab": "Construir skill para validação de documentação técnica.",
+      "evidence": "A skill passa casos de sucesso/falha com input fixo.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "mcp",
+      "p": 4,
+      "track": "agent",
+      "title": "MCP \u0026 integrações",
+      "summary": "Tools expostas por protocolo, autenticação, escopo e autorização.",
+      "lab": "Integrar um MCP controlado e testar limites de ação.",
+      "evidence": "Permissões verificadas por runtime/ferramentas, não apenas Markdown.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "security-harness",
+      "p": 4,
+      "track": "agent",
+      "title": "Hooks, sandbox \u0026 permissões",
+      "summary": "Política de aprovação, controle técnico, segredos e separação de ambientes.",
+      "lab": "Bloquear ação não autorizada e registrar a tentativa.",
+      "evidence": "Teste reproduzível prova bloqueio real no ambiente.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "memory",
+      "p": 4,
+      "track": "agent",
+      "title": "Memória persistente \u0026 RAG",
+      "summary": "Fontes, contexto ativo, versionamento, atualização, recuperação e conhecimento revogado.",
+      "lab": "Simular sessões distintas e fonte obsoleta no Segundo Cérebro.",
+      "evidence": "Agente cita fonte correta e rejeita decisão revogada.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "subagents",
+      "p": 4,
+      "track": "agent",
+      "title": "Subagentes \u0026 worktrees",
+      "summary": "Delegação só para tarefas independentes; isolamento de checkout e conflitos.",
+      "lab": "Executar duas tarefas independentes em worktrees isoladas.",
+      "evidence": "Diff e merge auditáveis; sem interferência entre agentes.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "evals",
+      "p": 4,
+      "track": "ops",
+      "title": "Evals \u0026 gates de qualidade",
+      "summary": "Benchmark fixo: bug, teste de regressão e refatoração; tempo e custos quando disponíveis.",
+      "lab": "Rodar os três casos antes/depois da mudança no harness.",
+      "evidence": "Registrar resultados, desvios, retrabalho e revisão manual.",
+      "courses": [
+        "claude"
+      ],
+      "links": [
+        "https://developers.openai.com/blog/eval-skills"
+      ]
+    },
+    {
+      "id": "english4",
+      "p": 4,
+      "track": "english",
+      "title": "Inglês: explicar o harness",
+      "summary": "Explicar skills, agentes, MCP e trade-offs sem depender de tradução.",
+      "lab": "Gravar explicação oral de 3–5 minutos.",
+      "evidence": "Gravação e pontos de correção.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "vertical",
+      "p": 5,
+      "track": "spec",
+      "title": "Da spec ao PR operável",
+      "summary": "Requisitos → arquitetura → tasks → código → validação → entrega.",
+      "lab": "Delegar feature de ponta a ponta e revisar criticamente diff e testes.",
+      "evidence": "Aceite demonstrado com evidências antes do merge.",
+      "courses": [
+        "sdd",
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "tdd",
+      "p": 5,
+      "track": "arch",
+      "title": "TDD \u0026 contratos",
+      "summary": "Testes unitários, integração, contratos, regressão e falhas controladas.",
+      "lab": "Implementar primeiro testes para uma regra de aprovação.",
+      "evidence": "Testes falham antes da implementação e passam depois.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "refactor",
+      "p": 5,
+      "track": "arch",
+      "title": "Refatoração segura",
+      "summary": "Isolar alteração, controlar dívida técnica e evitar regressão.",
+      "lab": "Refatorar módulo preservando contratos e comportamento.",
+      "evidence": "Comparação de diffs e regressão verde.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "threat",
+      "p": 5,
+      "track": "ops",
+      "title": "Threat modeling \u0026 segredos",
+      "summary": "Limites de confiança, acesso a dados, vazamentos e supply chain.",
+      "lab": "Modelar ameaças do agente/publicação e testar acesso indevido.",
+      "evidence": "Ameaças priorizadas e controles verificados.",
+      "courses": [
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "rollbacks",
+      "p": 5,
+      "track": "ops",
+      "title": "Deploy, rollback \u0026 incidentes",
+      "summary": "Logs, tracing, migração, recuperação de dados, backup/restauração e operação.",
+      "lab": "Implantar demo, induzir falha e testar restauração.",
+      "evidence": "Runbook e evidência de rollback; dados tratados separadamente de código.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "orchestration",
+      "p": 5,
+      "track": "agent",
+      "title": "LangGraph quando necessário",
+      "summary": "Orquestração multi-etapas e estado, sem introduzir complexidade prematura.",
+      "lab": "Comparar fluxo simples com fluxo em grafo sob falha controlada.",
+      "evidence": "Decisão justificada com trace e custo aproximado.",
+      "courses": [
+        "lang1",
+        "lang2"
+      ],
+      "links": []
+    },
+    {
+      "id": "review",
+      "p": 5,
+      "track": "git",
+      "title": "Code review humano \u0026 segurança",
+      "summary": "Revisão do diff, da cobertura de testes e de efeitos não previstos.",
+      "lab": "Revisar PR gerado por agente contra spec e threat model.",
+      "evidence": "Aprovação humana e registros de desvios.",
+      "courses": [
+        "git",
+        "claude"
+      ],
+      "links": []
+    },
+    {
+      "id": "english5",
+      "p": 5,
+      "track": "english",
+      "title": "Inglês: PR review",
+      "summary": "Simular code review ou entrevista técnica em inglês.",
+      "lab": "Explicar um trade-off em revisão de PR.",
+      "evidence": "Gravação e feedback acionável.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "portfolio",
+      "p": 6,
+      "track": "career",
+      "title": "Projeto âncora demonstrável",
+      "summary": "Plataforma de documentação com aprovação humana e integração Notion.",
+      "lab": "Demonstrar solicitação → rascunho com fontes → aprovação → publicação segura.",
+      "evidence": "Sem publicação não autorizada; registro de revisor, versão e destino.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "docs",
+      "p": 6,
+      "track": "arch",
+      "title": "C4, ADRs \u0026 runbook finais",
+      "summary": "Documentar arquitetura real, decisões e operação em vez de apenas intenção.",
+      "lab": "Revisar diagrams, OpenAPI, modelo e decisões contra o código.",
+      "evidence": "Documentos correspondem ao release mostrado.",
+      "courses": [
+        "arch"
+      ],
+      "links": []
+    },
+    {
+      "id": "tests-final",
+      "p": 6,
+      "track": "ops",
+      "title": "Hardening \u0026 cenários de falha",
+      "summary": "Testes de contrato, falha externa, segurança, rastreamento e restauração.",
+      "lab": "Rodar suite em checkout limpo e reproduzir falha de integração.",
+      "evidence": "Automação e evidências reproduzíveis por terceiro.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "demo",
+      "p": 6,
+      "track": "career",
+      "title": "Demo e apresentação de 15 min",
+      "summary": "Narrativa: problema, alternativas, decisão, implementação e resultado.",
+      "lab": "Apresentar projeto com GitHub, artefatos e limitações explícitas.",
+      "evidence": "README completo e demo reproduzível; nenhuma informação corporativa exposta.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "mentor",
+      "p": 6,
+      "track": "career",
+      "title": "Feedback de mentor",
+      "summary": "Revisão quinzenal de arquitetura; especialistas de agentes/cloud por lacuna.",
+      "lab": "Solicitar crítica de C4, ADRs, PR e riscos, sem depender de três mentores.",
+      "evidence": "Correções do mentor resolvidas e ligadas a artefatos.",
+      "courses": [],
+      "links": []
+    },
+    {
+      "id": "cert",
+      "p": 6,
+      "track": "cloud",
+      "title": "Certificação \u0026 posicionamento",
+      "summary": "Decidir AWS Solutions Architect Associate conforme prática e prontidão; Azure como alternativa.",
+      "lab": "Comparar custo e preparo e escrever case técnico de portfólio.",
+      "evidence": "Decisão registrada, não apenas inscrição em exame.",
+      "courses": [
+        "aws1",
+        "aws2"
+      ],
+      "links": []
+    },
+    {
+      "id": "english6",
+      "p": 6,
+      "track": "english",
+      "title": "Inglês: apresentação do projeto",
+      "summary": "Apresentar projeto em inglês por 5–10 minutos e responder perguntas.",
+      "lab": "Gravar apresentação de portfólio e reavaliar CEFR.",
+      "evidence": "Vídeo/áudio revisado e evolução registrada.",
+      "courses": [],
+      "links": []
+    }
+  ],
+  "tracks": {
+    "arch": {
+      "name": "Arquitetura",
+      "color": "#58b69d",
+      "bg": "#e3f6f0",
+      "short": "Engenharia de software"
+    },
+    "spec": {
+      "name": "SDD \u0026 Especificações",
+      "color": "#8365d5",
+      "bg": "#eee8ff",
+      "short": "Design orientado por especificação"
+    },
+    "git": {
+      "name": "GitHub \u0026 Review",
+      "color": "#4484cf",
+      "bg": "#e4f1ff",
+      "short": "Colaboração e governança"
+    },
+    "agent": {
+      "name": "Agentes \u0026 Harness",
+      "color": "#e3894b",
+      "bg": "#fff0df",
+      "short": "Orquestração e contexto"
+    },
+    "cloud": {
+      "name": "AWS \u0026 Cloud",
+      "color": "#d29534",
+      "bg": "#fff5d9",
+      "short": "Plataformas em produção"
+    },
+    "ops": {
+      "name": "Qualidade \u0026 Operação",
+      "color": "#e16e78",
+      "bg": "#ffecef",
+      "short": "Segurança, CI e observabilidade"
+    },
+    "english": {
+      "name": "Inglês técnico",
+      "color": "#648b9e",
+      "bg": "#e8f5f9",
+      "short": "Comunicação profissional"
+    },
+    "career": {
+      "name": "Portfólio \u0026 Carreira",
+      "color": "#5a6a88",
+      "bg": "#e9ecf4",
+      "short": "Mentoria e demonstração"
+    }
+  },
+  "courses": [
+    {
+      "id": "sdd",
+      "title": "Spec-Driven Development (SDD) com IA NA PRÁTICA",
+      "author": "Danilo Arantes",
+      "percent": 100,
+      "priority": "Aplicar agora",
+      "phase": "1 e 3"
+    },
+    {
+      "id": "git",
+      "title": "Git Completo: Do Básico ao Avançado",
+      "author": "Gabriel Ferrari",
+      "percent": 100,
+      "priority": "Aplicar agora",
+      "phase": "1"
+    },
+    {
+      "id": "claude",
+      "title": "Claude Code do Zero ao avançado, MCP, Skills, hooks, Rules",
+      "author": "Matheus Fraga",
+      "percent": 37,
+      "priority": "Muito alta",
+      "phase": "1 e 4"
+    },
+    {
+      "id": "arch",
+      "title": "Arquitetura de Software \u0026 Design de Sistemas Modernos",
+      "author": "Douglas Mugnos",
+      "percent": 4,
+      "priority": "Muito alta",
+      "phase": "1 a 6"
+    },
+    {
+      "id": "aws1",
+      "title": "AWS na Prática para Iniciantes",
+      "author": "Instrutor a confirmar na Udemy",
+      "percent": 0,
+      "priority": "Comparar ementa",
+      "phase": "2"
+    },
+    {
+      "id": "aws2",
+      "title": "AWS, na prática!",
+      "author": "Phillipe Farias",
+      "percent": 0,
+      "priority": "Alternativa AWS",
+      "phase": "2"
+    },
+    {
+      "id": "lang1",
+      "title": "LangChain e LangGraph: Crie Agentes de IA com LLMs e RAGs",
+      "author": "Fernando Amaral",
+      "percent": 0,
+      "priority": "Posterior",
+      "phase": "5"
+    },
+    {
+      "id": "lang2",
+      "title": "LangGraph: Crie Agentes de IA e Apps com LLMs",
+      "author": "Rodrigo Macedo e Paulo Andrade",
+      "percent": 0,
+      "priority": "Posterior",
+      "phase": "5"
+    }
+  ],
+  "plan14": [
+    [
+      "Dia 1",
+      "Diagnóstico técnico 0–5 e disponibilidade real de 17–19h."
+    ],
+    [
+      "Dia 2",
+      "Repositório do projeto âncora e visão de produto."
+    ],
+    [
+      "Dias 3–4",
+      "Requisitos, critérios de aceite e RNFs."
+    ],
+    [
+      "Dias 5–6",
+      "Diagramas C4 Context e Container."
+    ],
+    [
+      "Dia 7",
+      "ADR 001: monólito modular versus microsserviços."
+    ],
+    [
+      "Dias 8–9",
+      "API mínima com FastAPI + PostgreSQL e primeiro teste."
+    ],
+    [
+      "Dia 10",
+      "Lint, testes e CI no GitHub Actions."
+    ],
+    [
+      "Dia 11",
+      "CLAUDE.md/AGENTS.md curtos e memória de contexto inicial."
+    ],
+    [
+      "Dia 12",
+      "Pequena tarefa para coding agent, com diff e revisão."
+    ],
+    [
+      "Dia 13",
+      "Documentar erro do agente e aperfeiçoar gate/especificação."
+    ],
+    [
+      "Dia 14",
+      "Demo local e retrospectiva, sem depender de deploy público."
+    ]
+  ],
+  "week": [
+    [
+      "Segunda",
+      "19–22h",
+      "Arquitetura, fundamentos e fichamento",
+      3
+    ],
+    [
+      "Terça",
+      "19–22h",
+      "Laboratório do projeto âncora",
+      3
+    ],
+    [
+      "Quarta",
+      "19–22h",
+      "System Design / AWS e exercícios",
+      3
+    ],
+    [
+      "Quinta",
+      "19–22h",
+      "Claude Code, harness, skills e agentes",
+      3
+    ],
+    [
+      "Sexta",
+      "19–21h",
+      "Revisão, testes e planejamento",
+      2
+    ],
+    [
+      "Sábado",
+      "3–5h",
+      "Entrega semanal + mentoria quinzenal",
+      4
+    ],
+    [
+      "Domingo",
+      "Livre",
+      "Descanso ou recuperação opcional",
+      0
+    ]
+  ],
+  "links": [
+    [
+      "Roadmap original no Notion",
+      "https://app.notion.com/p/3f4859a990a68114a790d864c46b19db"
+    ],
+    [
+      "Spec Kit",
+      "https://github.com/github/spec-kit"
+    ],
+    [
+      "Claude Code",
+      "https://code.claude.com/docs/en/overview"
+    ],
+    [
+      "Codex",
+      "https://developers.openai.com/codex/"
+    ],
+    [
+      "AWS Well-Architected",
+      "https://aws.amazon.com/architecture/well-architected/"
+    ],
+    [
+      "Modelo C4",
+      "https://c4model.com/"
+    ],
+    [
+      "ADRs",
+      "https://adr.github.io/"
+    ],
+    [
+      "Harness Engineering",
+      "https://openai.com/index/harness-engineering/"
+    ],
+    [
+      "Ronnald Hawk",
+      "https://www.youtube.com/@ronnaldhawk"
+    ],
+    [
+      "Vídeo: empresa agêntica",
+      "https://www.youtube.com/watch?v=hlAFx9CwH6I"
+    ],
+    [
+      "Conversa com Fabio Akita",
+      "https://www.youtube.com/watch?v=4c7pbOxYn_A"
+    ]
+  ]
+}</script>
+<script>
+(()=>{'use strict';
+const D=JSON.parse(document.getElementById('payload').textContent);const KEY='ai-software-architect-roadmap-2026-v1';const q=s=>document.querySelector(s);const qa=s=>[...document.querySelectorAll(s)];
+const E=s=>String(s??'').replace(/[&<>"']/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[ch]));
+let state={statuses:{},days:{}},current=null,zoom=100,currentView='map';try{const saved=JSON.parse(localStorage.getItem(KEY)||'null');if(saved&&typeof saved==='object')state={statuses:saved.statuses||{},days:saved.days||{}}}catch(e){}
+function persist(){try{localStorage.setItem(KEY,JSON.stringify(state));}catch(e){toast('Navegador não permitiu salvar automaticamente. Exporte o progresso.')}}
+function toast(msg){const t=q('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window._tt);window._tt=setTimeout(()=>t.classList.remove('show'),2600)}
+const courseMap=Object.fromEntries(D.courses.map(c=>[c.id,c]));
+function status(id){return ['todo','doing','done'].includes(state.statuses[id])?state.statuses[id]:'todo'}
+function phaseOf(p){return D.phases.find(x=>x.n===p)}
+function counts(p){const a=D.nodes.filter(n=>!p||n.p===p);return {all:a.length,done:a.filter(n=>status(n.id)==='done').length,doing:a.filter(n=>status(n.id)==='doing').length}}
+function skillHTML(n){const t=D.tracks[n.track],st=status(n.id);const mark=st==='done'?'✓':st==='doing'?'·':'';return `<button class="skill" data-skill="${E(n.id)}" data-status="${st}" style="--track:${t.color}" title="Abrir: ${E(n.title)}"><span class="stripe"></span><span class="skill-info"><span class="kind">${E(t.name)}</span><span class="skill-name">${E(n.title)}</span></span><span class="check" aria-label="${st==='done'?'Concluído':st==='doing'?'Em andamento':'A fazer'}">${mark}</span><span class="arrow">›</span></button>`}
+function renderMap(){const out=D.phases.map(p=>{const ns=D.nodes.filter(n=>n.p===p.n),left=(p.n===1?['diagnostic','solid','clean','ddd','c4']:p.n===2?['api','db','messaging','cicd']:p.n===3?['discovery','prd','design','tasks']:p.n===4?['agentloop','instructions','skills','mcp','security-harness']:p.n===5?['vertical','tdd','refactor','threat']:['portfolio','docs','tests-final','demo']);const L=left.map(id=>ns.find(n=>n.id===id)).filter(Boolean);const R=ns.filter(n=>!left.includes(n.id));const ct=counts(p.n);return `<article class="stage" id="phase-${p.n}"><div class="branch left"><div class="branch-label">${p.n===4?'CONTEXTO E EXECUÇÃO':'ENGENHARIA E PROCESSO'}</div>${L.map(skillHTML).join('')}</div><div class="phase-card"><span class="phase-over">FASE ${String(p.n).padStart(2,'0')} &nbsp; · &nbsp; SEMANAS ${p.weeks}</span><h3>${E(p.title)}</h3><p>${E(p.desc)}</p><span class="stage-bottom" data-phase-count="${p.n}">${ct.done}/${ct.all} habilidades validadas</span><br/><button data-show-phase="${p.n}">Ver entregas →</button></div><div class="branch right"><div class="branch-label">${p.n===2?'CLOUD, OPERAÇÃO E INGLÊS':p.n===4?'MEMÓRIA, EVALS E IDIOMA':'AGENTES, PRÁTICA E EVOLUÇÃO'}</div>${R.map(skillHTML).join('')}</div></article>`}).join('');q('#stages').innerHTML=out;filterMap();}
+function filterMap(){const t=q('#filter-track').value,s=q('#filter-status').value,search=q('#search').value.trim().toLocaleLowerCase('pt-BR');let visible=0;qa('.skill').forEach(el=>{const n=D.nodes.find(x=>x.id===el.dataset.skill);let hay=[n.title,n.summary,n.lab,n.evidence,D.tracks[n.track].name].join(' ').toLocaleLowerCase('pt-BR');const match=(t==='all'||t===n.track)&&(s==='all'||s===status(n.id))&&(!search||hay.includes(search));el.style.display=match?'':'none';if(match)visible++});qa('.branch').forEach(b=>{b.style.opacity=b.querySelectorAll('.skill:not([style*="display: none"])').length?1:.25});q('.map-start p').textContent=visible===D.nodes.length?'Engenharia sólida · Spec-Driven Development · Harness e Segundo Cérebro':`${visible} de ${D.nodes.length} assuntos correspondem aos filtros`;}
+function renderStats(){const c=counts();q('#stat-done').textContent=`${c.done} / ${c.all}`;q('#stat-doing').textContent=c.doing;q('#overall-bar').style.width=(c.done/c.all*100).toFixed(1)+'%';q('#overall-pct').textContent=Math.round(c.done/c.all*100)+'% das habilidades validadas';qa('[data-phase-count]').forEach(el=>{const x=counts(+el.dataset.phaseCount);el.textContent=`${x.done}/${x.all} habilidades validadas`;});}
+function renderPhases(){q('#phase-list').innerHTML=D.phases.map(p=>{const c=counts(p.n);return `<article class="road-row"><div class="road-week">Sem. ${p.weeks}</div><div><h3>${E(p.title)}</h3><p>${E(p.desc)}</p><p style="margin-top:10px"><strong style="color:#4f6860">ENTREGA:</strong> ${E(p.deliverable)}</p><div class="path-footer">${E(p.date)} · ${c.all} tópicos · ${c.done} validados</div></div><div class="road-meta"><strong>${c.done}/${c.all}</strong><br/>concluídos</div></article>`}).join('');}
+function renderCourses(){q('#course-list').innerHTML=D.courses.map(c=>`<article class="course"><div class="eyebrow" style="font-size:9px">UDAEMY · FASE ${E(c.phase)}</div><h3>${E(c.title)}</h3><div class="author">${E(c.author)}</div><span class="stagepill">${E(c.priority)}</span><div class="course-num">${c.percent}%</div><div class="course-track"><span style="width:${c.percent}%"></span></div><div class="note">${c.percent===100?'Curso concluído · validar na prática':c.percent===0?'Curso não iniciado':'Progresso registrado na captura'}</div></article>`).join('').replaceAll('UDAEMY','UDEMY')}
+function renderDays(){q('#daily-list').innerHTML=D.plan14.map(([day,txt],i)=>`<div class="daily"><label><input type="checkbox" data-day="${i}" ${state.days[i]?'checked':''}/><span class="day">${E(day)}</span><span class="task">${E(txt)}</span></label></div>`).join('');q('#schedule-list').innerHTML=D.week.map(([day,time,what])=>`<tr><td>${E(day)}</td><td style="white-space:nowrap">${E(time)}</td><td>${E(what)}</td></tr>`).join('')}
+function renderNav(){q('#phase-nav').innerHTML=D.phases.map(p=>`<button class="mini-phase" data-jump="${p.n}"><span class="phase-num">${p.n}</span><span>${E(p.title)}</span></button>`).join('');q('#filter-track').insertAdjacentHTML('beforeend',Object.entries(D.tracks).map(([id,t])=>`<option value="${id}">${E(t.name)}</option>`).join(''));q('#notion-link').href=D.source;q('#source-bottom').href=D.source}
+function switchView(v){if(!['map','phases','courses','plan'].includes(v))return;currentView=v;qa('[data-view]').forEach(x=>{x.classList.toggle('active',x.dataset.view===v);x.setAttribute('aria-selected',x.dataset.view===v?'true':'false')});qa('.section').forEach(x=>x.classList.toggle('active',x.id===`view-${v}`));window.scrollTo({top:0,behavior:'smooth'})}
+function openSkill(id){const n=D.nodes.find(x=>x.id===id);if(!n)return;current=id;const t=D.tracks[n.track],p=phaseOf(n.p);q('#detail-tag').textContent=`FASE ${n.p} · SEMANAS ${p.weeks} · ${t.name.toUpperCase()}`;q('#detail-title').textContent=n.title;const courses=n.courses.map(id=>courseMap[id]).filter(Boolean);q('#drawer-body').innerHTML=`<h4>O que dominar</h4><p>${E(n.summary)}</p><h4>Laboratório prático</h4><div class="detail"><p>${E(n.lab)}</p></div><h4>Critério de conclusão</h4><div class="detail" style="background:#eff8f2;border-color:#cce8d7"><p>${E(n.evidence)}</p></div>${courses.length?`<h4>Cursos relacionados</h4>${courses.map(c=>`<div style="display:flex;justify-content:space-between;gap:15px;padding:8px 0;border-bottom:1px solid #e5ebea;font-size:12px"><span>${E(c.title)}</span><strong style="white-space:nowrap;color:#50866f">${c.percent}%</strong></div>`).join('')}`:''}<h4>Leituras e referências</h4><div class="detail-links">${[...n.links.map((link,i)=>`<a href="${E(link)}" target="_blank" rel="noopener">Referência ${i+1} ↗</a>`),`<a href="${E(D.source)}" target="_blank" rel="noopener">Roadmap original no Notion ↗</a>`].join('')}</div><p style="font-size:11px;color:#819298;margin-top:20px">Marque como concluído somente depois de produzir e verificar a evidência acima. O progresso do curso não muda automaticamente esta etapa.</p>`;q('#overlay').classList.add('show');q('#drawer').classList.add('show');q('#close-drawer').focus()}
+function closeDrawer(){q('#overlay').classList.remove('show');q('#drawer').classList.remove('show');current=null}
+function setStatus(st){if(!current)return;state.statuses[current]=st;persist();renderMap();renderStats();renderPhases();const name=D.nodes.find(n=>n.id===current).title;toast(`“${name}” — ${st==='done'?'concluído':st==='doing'?'em andamento':'a fazer'}`);closeDrawer()}
+function zoomMap(v){zoom=Math.min(125,Math.max(70,v));q('#map-frame').style.zoom=zoom+'%';q('#zoom-num').textContent=zoom+'%'}
+function exportState(){const x={schema:'ai-architect-roadmap-v1',exportedAt:new Date().toISOString(),statuses:state.statuses,days:state.days};const b=new Blob([JSON.stringify(x,null,2)],{type:'application/json'}),u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download='progresso-roadmap-ia-2026-2027.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),1500);toast('Progresso exportado em JSON')}
+async function importState(f){if(!f)return;try{const obj=JSON.parse(await f.text());if(obj.schema!=='ai-architect-roadmap-v1'||!obj.statuses||!obj.days)throw new Error('Formato inválido');const validIds=new Set(D.nodes.map(n=>n.id));const statuses={};for(const [id,st] of Object.entries(obj.statuses)){if(validIds.has(id)&&['todo','doing','done'].includes(st))statuses[id]=st}const days={};for(const [i,v]of Object.entries(obj.days)){if(/^\d+$/.test(i)&&Number(i)<D.plan14.length)days[i]=!!v}state={statuses,days};persist();renderMap();renderStats();renderPhases();renderDays();toast('Progresso importado com sucesso')}catch(e){toast('Não foi possível importar: arquivo inválido')}q('#import-file').value=''}
+// Events
+q('#stages').addEventListener('click',e=>{const skill=e.target.closest('[data-skill]');if(skill){openSkill(skill.dataset.skill);return}const phase=e.target.closest('[data-show-phase]');if(phase){switchView('phases');q('#view-phases').scrollIntoView({behavior:'smooth',block:'start'})}});
+qa('[data-view]').forEach(x=>x.addEventListener('click',()=>switchView(x.dataset.view)));
+q('#phase-nav').addEventListener('click',e=>{const a=e.target.closest('[data-jump]');if(!a)return;switchView('map');setTimeout(()=>q('#phase-'+a.dataset.jump)?.scrollIntoView({behavior:'smooth',block:'center'}),40)});
+q('#close-drawer').addEventListener('click',closeDrawer);q('#overlay').addEventListener('click',closeDrawer);document.addEventListener('keydown',e=>{if(e.key==='Escape')closeDrawer()});q('#status-todo').addEventListener('click',()=>setStatus('todo'));q('#status-doing').addEventListener('click',()=>setStatus('doing'));q('#status-done').addEventListener('click',()=>setStatus('done'));
+q('#search').addEventListener('input',filterMap);q('#filter-track').addEventListener('change',filterMap);q('#filter-status').addEventListener('change',filterMap);q('#zoom-in').addEventListener('click',()=>zoomMap(zoom+10));q('#zoom-out').addEventListener('click',()=>zoomMap(zoom-10));q('#zoom-reset').addEventListener('click',()=>zoomMap(100));q('#daily-list').addEventListener('change',e=>{if(e.target.matches('[data-day]')){state.days[e.target.dataset.day]=e.target.checked;persist();toast('Plano atualizado')}});
+q('#print-btn').addEventListener('click',()=>window.print());q('#export-json').addEventListener('click',exportState);q('#import-btn').addEventListener('click',()=>q('#import-file').click());q('#import-file').addEventListener('change',e=>importState(e.target.files[0]));
+renderNav();renderMap();renderStats();renderPhases();renderCourses();renderDays();
+})();
+</script>
+</body>
+</html>
